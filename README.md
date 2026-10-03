@@ -16,8 +16,12 @@ or (2) a direction-selective, velocity-dependent resistance, and every subset of
 |---|---|
 | `notebooks/g1_spasticity_revision_experiments.ipynb` | All experiments (Google Colab, NVIDIA T4). Sections: diagnostics, verification, experiments AB (symmetric relief), C (single-joint dose), D1 (direction-selective dose), D2 (direction-selective relief), aggregation, Fig. S1 |
 | `analysis/make_tables_figures.py` | Regenerates every table and figure of the manuscript from `results/raw` |
-| `analysis/make_supplementary_xlsx.py` | Builds `results/Supplementary_Data_Sheet_1.xlsx` (Tables S1-S7) |
+| `analysis/make_supplementary_xlsx.py` | Builds `results/Supplementary_Data_Sheet_1.xlsx` (Tables S1-S8) |
 | `results/raw/*.csv` | One row per rollout (8 policies x 4 speeds x 10 rollouts per job) with fall outcome and kinematic/actuator measures; column `kd` is the resistance gain _b_ of the direction-selective model in the manuscript. One truncated line left by an interrupted write in `expC_single_joint_dose.csv` was removed; the affected job had been rerun in full, so no rollout is missing or duplicated |
+| `results/raw/diag_original_command.csv` | Check that, under the original evaluation settings, the policy observed the intended forward-velocity command (seeds 1 and 8; fraction of control steps with the command as intended) |
+| `results/raw/verification_torque_injection.csv` | Torque-injection check of the GPU-side applied force (+20 N·m at the right knee of a standing policy; mean knee angle over the last 50 steps and the read-back applied torque) |
+| `results/raw/verification_determinism.csv` | The same job (seed 1, right three-joint damping x10,000, no relief, 40 environments) run twice within one execution; rollout-level agreement and number of falls in each run |
+| `results/raw/figS1_foot_height_series.csv` | Right foot-link height time series for Supplementary Figure S1 (policy seed 1, 0.5 m/s, no initial-state randomization; unperturbed and right ankle damping x1,000), with detected peaks labelled main or secondary; written by notebook section 9 and redrawn by `analysis/make_tables_figures.py` |
 | `results/tables`, `results/figures` | Generated outputs |
 | `checkpoints/g1_velocity_seed<N>_model_2999.pt` | Trained policies for seeds 1-8; `checkpoints/README.md` shows how to arrange them for the notebook |
 | `notebooks/original_submission/` | Notebook of the originally submitted version, kept for transparency (see note below) |
