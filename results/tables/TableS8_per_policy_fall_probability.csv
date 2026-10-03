@@ -1,0 +1,129 @@
+model,side,condition,speed,seed1,seed2,seed3,seed4,seed5,seed6,seed7,seed8
+"contracture-like (damping x10,000)",right,no_treatment,0.3,0.2,0.1,0.3,0.1,0.7,0.1,0.4,0.7
+"contracture-like (damping x10,000)",right,no_treatment,0.5,1.0,0.6,0.8,0.3,1.0,0.5,0.7,1.0
+"contracture-like (damping x10,000)",right,no_treatment,0.7,1.0,1.0,1.0,0.9,1.0,0.7,1.0,1.0
+"contracture-like (damping x10,000)",right,no_treatment,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_hip,0.3,1.0,0.6,0.7,0.7,0.9,0.3,0.7,1.0
+"contracture-like (damping x10,000)",right,treat_hip,0.5,1.0,1.0,0.7,0.7,1.0,0.7,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_hip,0.7,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_hip,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_knee,0.3,0.0,1.0,0.0,0.1,0.9,0.9,0.8,0.8
+"contracture-like (damping x10,000)",right,treat_knee,0.5,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_knee,0.7,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_knee,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2
+"contracture-like (damping x10,000)",right,treat_ankle,0.5,0.4,0.0,0.0,0.5,0.0,0.2,0.0,1.0
+"contracture-like (damping x10,000)",right,treat_ankle,0.7,1.0,0.9,0.1,0.9,0.5,0.9,0.4,1.0
+"contracture-like (damping x10,000)",right,treat_ankle,0.9,1.0,1.0,0.5,1.0,0.7,1.0,0.9,1.0
+"contracture-like (damping x10,000)",right,treat_hip_knee,0.3,0.4,0.2,0.0,0.1,0.6,0.3,0.0,0.3
+"contracture-like (damping x10,000)",right,treat_hip_knee,0.5,0.3,0.6,0.0,1.0,1.0,0.5,0.5,0.6
+"contracture-like (damping x10,000)",right,treat_hip_knee,0.7,0.3,0.9,0.0,0.7,1.0,0.5,0.8,0.9
+"contracture-like (damping x10,000)",right,treat_hip_knee,0.9,0.7,1.0,0.0,1.0,0.8,0.7,1.0,1.0
+"contracture-like (damping x10,000)",right,treat_hip_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_hip_ankle,0.5,0.1,0.0,0.0,0.2,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_hip_ankle,0.7,0.0,0.0,0.0,0.7,0.0,0.0,0.0,0.4
+"contracture-like (damping x10,000)",right,treat_hip_ankle,0.9,0.1,0.0,0.0,1.0,0.0,0.0,0.0,0.6
+"contracture-like (damping x10,000)",right,treat_knee_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_knee_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_knee_ankle,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_knee_ankle,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_all,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_all,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_all,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",right,treat_all,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,no_treatment,0.3,0.2,0.4,0.2,0.2,0.3,0.2,0.6,0.3
+"contracture-like (damping x10,000)",left,no_treatment,0.5,0.6,1.0,0.9,1.0,0.8,0.9,0.9,0.9
+"contracture-like (damping x10,000)",left,no_treatment,0.7,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",left,no_treatment,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",left,treat_hip,0.3,0.3,0.7,0.6,0.7,0.5,0.6,0.5,0.6
+"contracture-like (damping x10,000)",left,treat_hip,0.5,0.7,1.0,0.9,1.0,1.0,0.8,1.0,0.9
+"contracture-like (damping x10,000)",left,treat_hip,0.7,0.9,1.0,1.0,1.0,1.0,0.9,0.9,1.0
+"contracture-like (damping x10,000)",left,treat_hip,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",left,treat_knee,0.3,0.4,0.5,0.6,0.6,0.3,0.2,0.9,0.6
+"contracture-like (damping x10,000)",left,treat_knee,0.5,1.0,0.9,1.0,1.0,1.0,0.9,1.0,1.0
+"contracture-like (damping x10,000)",left,treat_knee,0.7,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",left,treat_knee,0.9,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+"contracture-like (damping x10,000)",left,treat_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_ankle,0.5,0.0,0.2,0.1,1.0,0.0,0.0,0.0,0.5
+"contracture-like (damping x10,000)",left,treat_ankle,0.7,0.2,0.9,1.0,1.0,0.3,0.9,0.0,1.0
+"contracture-like (damping x10,000)",left,treat_ankle,0.9,1.0,1.0,0.9,1.0,0.9,1.0,0.0,1.0
+"contracture-like (damping x10,000)",left,treat_hip_knee,0.3,0.3,0.1,0.0,0.2,0.1,0.2,0.0,0.4
+"contracture-like (damping x10,000)",left,treat_hip_knee,0.5,0.6,0.0,0.2,0.2,0.3,0.2,0.0,0.6
+"contracture-like (damping x10,000)",left,treat_hip_knee,0.7,0.8,0.1,0.5,0.7,0.8,0.0,0.1,0.8
+"contracture-like (damping x10,000)",left,treat_hip_knee,0.9,0.9,0.2,0.5,1.0,0.9,0.3,0.0,0.9
+"contracture-like (damping x10,000)",left,treat_hip_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_hip_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_hip_ankle,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_hip_ankle,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_knee_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_knee_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_knee_ankle,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_knee_ankle,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_all,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_all,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_all,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"contracture-like (damping x10,000)",left,treat_all,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,no_treatment,0.3,0.1,0.0,0.1,0.0,0.0,0.1,0.0,0.3
+"direction-selective (right b = 40, left b = 50)",right,no_treatment,0.5,0.2,0.0,0.3,0.5,0.0,0.2,0.2,0.6
+"direction-selective (right b = 40, left b = 50)",right,no_treatment,0.7,0.8,0.1,0.4,0.8,0.2,0.4,0.0,1.0
+"direction-selective (right b = 40, left b = 50)",right,no_treatment,0.9,0.9,0.2,0.2,0.8,0.3,0.8,0.2,1.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip,0.5,0.5,0.0,0.3,0.7,0.0,0.0,0.1,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip,0.7,0.2,0.0,0.4,0.7,0.0,0.1,0.1,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip,0.9,0.6,0.0,0.0,0.6,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_knee,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_knee,0.5,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.2
+"direction-selective (right b = 40, left b = 50)",right,treat_knee,0.7,0.9,0.1,0.1,0.8,0.0,0.2,0.0,0.3
+"direction-selective (right b = 40, left b = 50)",right,treat_knee,0.9,0.8,0.1,0.1,1.0,0.0,0.3,0.0,0.1
+"direction-selective (right b = 40, left b = 50)",right,treat_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1
+"direction-selective (right b = 40, left b = 50)",right,treat_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4
+"direction-selective (right b = 40, left b = 50)",right,treat_ankle,0.7,0.3,0.1,0.0,0.3,0.1,0.3,0.0,1.0
+"direction-selective (right b = 40, left b = 50)",right,treat_ankle,0.9,0.7,0.6,0.0,0.4,0.0,0.9,0.1,1.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_knee,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_knee,0.5,0.3,0.0,0.1,0.7,0.0,0.3,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_knee,0.7,0.7,0.0,0.2,0.8,0.0,0.2,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_knee,0.9,0.3,0.0,0.0,0.6,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_ankle,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_hip_ankle,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_knee_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_knee_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_knee_ankle,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_knee_ankle,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_all,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_all,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_all,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",right,treat_all,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,no_treatment,0.3,0.5,0.5,0.0,0.5,0.8,0.4,0.6,0.6
+"direction-selective (right b = 40, left b = 50)",left,no_treatment,0.5,0.6,0.8,0.1,1.0,0.9,1.0,0.8,0.7
+"direction-selective (right b = 40, left b = 50)",left,no_treatment,0.7,0.3,1.0,0.2,1.0,1.0,1.0,0.8,0.6
+"direction-selective (right b = 40, left b = 50)",left,no_treatment,0.9,0.2,1.0,0.0,1.0,1.0,1.0,1.0,0.8
+"direction-selective (right b = 40, left b = 50)",left,treat_hip,0.3,0.1,0.1,0.4,0.1,0.2,0.1,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_hip,0.5,0.0,0.9,0.5,0.3,0.1,0.9,0.4,0.5
+"direction-selective (right b = 40, left b = 50)",left,treat_hip,0.7,0.0,1.0,0.2,0.1,0.2,0.3,0.1,0.2
+"direction-selective (right b = 40, left b = 50)",left,treat_hip,0.9,0.0,1.0,0.2,0.1,0.4,0.6,0.0,0.1
+"direction-selective (right b = 40, left b = 50)",left,treat_knee,0.3,0.0,0.0,0.0,0.3,0.0,0.0,0.1,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_knee,0.5,0.0,0.1,0.0,0.4,0.0,0.1,0.2,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_knee,0.7,0.3,0.6,0.0,0.9,0.1,0.5,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_knee,0.9,0.3,0.1,0.0,1.0,0.0,0.5,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_ankle,0.3,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_ankle,0.5,0.5,0.7,0.0,0.6,0.6,0.8,0.8,0.2
+"direction-selective (right b = 40, left b = 50)",left,treat_ankle,0.7,0.8,1.0,0.1,1.0,0.9,1.0,0.9,0.7
+"direction-selective (right b = 40, left b = 50)",left,treat_ankle,0.9,0.9,1.0,0.2,1.0,0.9,1.0,0.9,0.8
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_knee,0.3,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_knee,0.5,0.2,0.0,0.1,0.2,0.0,0.1,0.0,0.4
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_knee,0.7,0.2,0.0,0.2,0.5,0.0,0.0,0.0,0.6
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_knee,0.9,0.1,0.0,0.1,0.0,0.0,0.0,0.0,0.3
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_ankle,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_hip_ankle,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_knee_ankle,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_knee_ankle,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_knee_ankle,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_knee_ankle,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_all,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_all,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_all,0.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"direction-selective (right b = 40, left b = 50)",left,treat_all,0.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
