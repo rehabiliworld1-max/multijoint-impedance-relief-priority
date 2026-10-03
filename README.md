@@ -19,7 +19,7 @@ or (2) a direction-selective, velocity-dependent resistance, and every subset of
 | `analysis/make_supplementary_xlsx.py` | Builds `results/Supplementary_Data_Sheet_1.xlsx` (Tables S1-S7) |
 | `results/raw/*.csv` | One row per rollout (8 policies x 4 speeds x 10 rollouts per job) with fall outcome and kinematic/actuator measures; column `kd` is the resistance gain _b_ of the direction-selective model in the manuscript. One truncated line left by an interrupted write in `expC_single_joint_dose.csv` was removed; the affected job had been rerun in full, so no rollout is missing or duplicated |
 | `results/tables`, `results/figures` | Generated outputs |
-| `checkpoints/` | Trained policies for seeds 1-8 (see `checkpoints/README.md`) |
+| `checkpoints/g1_velocity_seed<N>_model_2999.pt` | Trained policies for seeds 1-8; `checkpoints/README.md` shows how to arrange them for the notebook |
 | `notebooks/original_submission/` | Notebook of the originally submitted version, kept for transparency (see note below) |
 
 ## Reproducing
