@@ -1,0 +1,3 @@
+condition,knee_angle_mean_last50_deg,qfrc_applied_read_back_Nm
+no_torque,30.70590744018555,0.0
+with_torque,52.68809310913086,20.0
