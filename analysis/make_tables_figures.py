@@ -293,6 +293,21 @@ def main():
                     "wilcoxon_p_seed_speed_cells": float(stats.wilcoxon(pa, pb, zero_method="zsplit").pvalue)})
     rep = pd.DataFrame(rep); rep.to_csv(TAB / "TableS7_reproducibility.csv", index=False)
 
+    # ---------------- Table S8: per-policy fall probability, relief experiments
+    order = ["no_treatment", "treat_hip", "treat_knee", "treat_ankle", "treat_hip_knee", "treat_hip_ankle",
+             "treat_knee_ankle", "treat_all"]
+    s8 = []
+    for d, model in [(ab, "contracture-like (damping x10,000)"), (d2, "direction-selective (right b = 40, left b = 50)")]:
+        ps = per_seed(d, ["side", "condition", "speed"])
+        w = ps.pivot_table(index=["side", "condition", "speed"], columns="seed", values="p").reset_index()
+        w["condition"] = pd.Categorical(w["condition"], order, ordered=True)
+        w = w.sort_values(["side", "condition", "speed"], key=lambda c: c.map({"right": 0, "left": 1}) if c.name == "side" else c)
+        w.insert(0, "model", model); s8.append(w)
+    s8 = pd.concat(s8, ignore_index=True)
+    s8.columns = [f"seed{c}" if not isinstance(c, str) else c for c in s8.columns]
+    s8["condition"] = s8["condition"].astype(str)
+    s8.to_csv(TAB / "TableS8_per_policy_fall_probability.csv", index=False)
+
     # ---------------- key numbers for the text
     def fp(ft, side, cnd, sp):
         return float(rnd(100 * float(ft[(ft.side == side) & (ft.condition == cnd) & (ft.speed == sp)]["mean"].iloc[0])))
@@ -310,7 +325,35 @@ def main():
     KEY["dir_ankle_mean_torque"] = {f"{s}_{k}": round(float(v), 2) for (s, k), v in tau_dir.items()}
     KEY["n_rows"] = {"AB": len(ab), "D1": len(d1), "D2": len(d2), "C": len(c)}
     (ROOT / "results/key_numbers.json").write_text(json.dumps(KEY, indent=1, default=float))
+    figure_s1()
     print("done")
+
+
+def figure_s1(thresh=0.05):
+    """Supplementary Figure S1 from results/raw/figS1_foot_height_series.csv (saved by section 9 of the notebook):
+    right foot-link height, unperturbed vs right ankle damping x1,000 (policy seed 1, 0.5 m/s, no initial-state
+    randomization). Peak classes are taken from the CSV (detection: prominence >= 5 mm, separation >= 0.2 s)."""
+    f = RAW / "figS1_foot_height_series.csv"
+    if not f.exists():
+        return
+    d = pd.read_csv(f)
+    fig, axes = plt.subplots(2, 1, figsize=(7.2, 5.4), sharex=True, sharey=True)
+    for ax, (label, g) in zip(axes, d.groupby("condition", sort=False)):
+        t, z, k = g["time_s"].values, g["foot_height_m"].values, g["peak"].fillna("").values
+        main, small = k == "main", k == "secondary"
+        ax.plot(t, z, color="#2b6cb0", lw=1.2, label="Right foot height")
+        ax.plot(t[main], z[main], "o", ms=5, color="#2f855a", label="Main swing peak (≥ 0.05 m)")
+        ax.plot(t[small], z[small], "x", ms=6, mew=1.5, color="#c53030", label="Secondary peak (< 0.05 m)")
+        ax.axhline(thresh, color="gray", ls=":", lw=1, label=f"Classification threshold ({thresh} m)")
+        ax.set_title(f"{label}: {int(main.sum())} main, {int(small.sum())} secondary peaks", fontsize=10)
+        ax.set_ylabel("Right foot height (m)")
+    axes[1].set_xlabel("Time (s)")
+    h, l = axes[0].get_legend_handles_labels()
+    fig.legend(h, l, loc="lower center", ncol=2, fontsize=8, frameon=True)
+    fig.tight_layout(rect=(0, 0.10, 1, 1))
+    for ext in ("png", "tiff"):
+        fig.savefig(FIG / f"FigS1_foot_height.{ext}", dpi=300)
+    plt.close(fig)
 
 
 if __name__ == "__main__":

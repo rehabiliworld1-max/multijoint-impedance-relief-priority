@@ -1,4 +1,4 @@
-"""Build Supplementary Data Sheet 1 (Tables S1-S7) from results/tables. Run after make_tables_figures.py."""
+"""Build Supplementary Data Sheet 1 (Tables S1-S8) from results/tables. Run after make_tables_figures.py."""
 from decimal import Decimal, ROUND_HALF_EVEN
 from pathlib import Path
 import pandas as pd
@@ -27,7 +27,9 @@ def tests(f):
         "wilcoxon_p_uncorrected": "Wilcoxon P (reference only)", "delta_vs_reference": "difference vs reference (pp)",
         "delta_ref_ci_hi": "95% CI high vs reference (pp)", "restored": "restored (CI high <= 5 pp)"})
 
-s1 = pct(pd.read_csv(T / "TableS1_single_joint_dose_symmetric.csv"), ["mean", "std"]).rename(
+s1 = pd.read_csv(T / "TableS1_single_joint_dose_symmetric.csv")
+s1["target"] = s1["target"].map({"hip_pitch": "hip pitch", "knee": "knee", "ankle_pitch": "ankle pitch", "equinovarus": "ankle pitch + roll"})
+s1 = pct(s1, ["mean", "std"]).rename(
     columns={"target": "perturbed joint(s)", "damping_scale": "damping scale (x)", "speed": "speed (m/s)",
              "mean": "fall probability mean (%)", "std": "SD across policies (%)"})
 s2 = pct(pd.read_csv(T / "TableS2_dose_directional.csv"), ["mean", "std"]).rename(
@@ -36,8 +38,11 @@ s2 = pct(pd.read_csv(T / "TableS2_dose_directional.csv"), ["mean", "std"]).renam
 s5 = pd.read_csv(T / "TableS5_kinematics_symmetric_all.csv"); s5["condition"] = s5["condition"].map(LAB)
 s6 = pd.read_csv(T / "TableS6_kinematics_directional_all.csv"); s6["condition"] = s6["condition"].map(LAB)
 s7 = pd.read_csv(T / "TableS7_reproducibility.csv").rename(columns={"kd": "resistance gain b (N m s/rad)"})
+s8 = pd.read_csv(T / "TableS8_per_policy_fall_probability.csv"); s8["condition"] = s8["condition"].map(LAB)
+s8 = pct(s8, [c for c in s8.columns if c.startswith("seed")]).rename(
+    columns={**{f"seed{i}": f"policy seed {i} (%)" for i in range(1, 9)}, "speed": "speed (m/s)", "condition": "relief condition"})
 sheets = {
-    "README": pd.DataFrame({"Sheet": ["Table S1", "Table S2", "Table S3", "Table S4", "Table S5", "Table S6", "Table S7", "Notes"],
+    "README": pd.DataFrame({"Sheet": ["Table S1", "Table S2", "Table S3", "Table S4", "Table S5", "Table S6", "Table S7", "Table S8", "Notes"],
         "Content": [
             "Single-joint dose-response, contracture-like model (actuator damping scale), all speeds and sides; scale 1 = unperturbed. 8 policies x 10 rollouts per cell.",
             "Dose-response, direction-selective velocity-dependent model (ankle alone or hip+knee+ankle), all speeds and sides.",
@@ -46,10 +51,11 @@ sheets = {
             "Kinematic and actuator measures (means over included rollouts) for every condition, side and speed, contracture-like model. time_to_fall_s mean time to fall over rollouts that fell (s); rom_* range of motion (deg); tauabs_* mean |actuator torque| (N m); taupk_* peak |actuator torque| (N m); sat_* fraction of time at the torque limit (|torque| >= 98% of limit); taudir_* mean |direction-selective torque| (N m); actstd_* SD of policy action; foot_* swing-peak measures (m, counts; main >= 0.05 m, secondary < 0.05 m); trunk_roll_std_deg, trunk_pitch_std_deg SD of pelvis roll and pitch (deg); trunk_tilt_max_deg maximum pelvis tilt (deg); base_vx_mean mean forward velocity (m/s); vx_tracking_err |mean forward velocity - commanded speed| (m/s).",
             "As Table S5, direction-selective model.",
             "Reproducibility: the untreated direction-selective three-joint condition run twice with identical configuration (gain sweep vs relief experiment).",
+            "Per-policy fall probability (%) for every relief condition, side and speed under both models (policy seeds 1-8; 10 rollouts each). The mean across the eight columns equals the values in Tables 2 and 3.",
             "pp = percentage points. Kinematic and actuator measures are computed from 0.5 s to episode end or first fall; rollouts with fewer than 50 valid steps in this window are excluded from these measures (they remain in fall probability). Raw per-rollout data: results/raw/*.csv in the code repository."]}),
     "Table S1": s1, "Table S2": s2,
     "Table S3": tests("TableS3_symmetric_relief_tests.csv"), "Table S4": tests("TableS4_directional_relief_tests.csv"),
-    "Table S5": s5.round(3), "Table S6": s6.round(3), "Table S7": s7.round(4)}
+    "Table S5": s5.round(3), "Table S6": s6.round(3), "Table S7": s7.round(4), "Table S8": s8}
 with pd.ExcelWriter(out, engine="openpyxl") as w:
     for name, df in sheets.items():
         df.to_excel(w, sheet_name=name, index=False)
